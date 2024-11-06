@@ -1,0 +1,317 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+    --main-color: #012143;
+    --second-color: #012143ad;
+}
+
+
+/* Start Slider Animation */
+
+.selectR,
+.selectL {
+    z-index: 3;
+}
+
+.outL,
+.outR {
+    z-index: 1;
+}
+
+
+.outR {
+    animation: outR .5s ease;
+    z-index: 1;
+}
+
+@keyframes outR {
+    from {
+        transform: translateX(0);
+    }
+
+    to {
+        transform: translateX(100%);
+    }
+}
+
+.outL {
+    animation: outL .5s ease;
+}
+
+@keyframes outL {
+    from {
+        transform: translateX(0);
+    }
+
+    to {
+        transform: translateX(-100%);
+    }
+}
+
+.selectL {
+    animation: entryLeft .5s ease;
+}
+
+@keyframes entryLeft {
+    from {
+        transform: translateX(-100%);
+    }
+
+    to {
+        transform: translateX(0);
+    }
+}
+
+.selectR {
+    animation: entryRight .5s ease;
+}
+
+@keyframes entryRight {
+    from {
+        transform: translateX(100%);
+    }
+
+    to {
+        transform: translateX(0);
+    }
+}
+
+.here {
+    background-color: #d1d5db;
+}
+
+/* End Slider Animation */
+
+/* Start Seclect Size */
+
+.not-active,
+.active {
+    background-color: #ddd;
+    border: 1px dashed var(--main-color);
+    padding: 10px 20px;
+    margin: 5px;
+    border-radius: 8px;
+    transition: .4s;
+}
+
+.not-active:hover {
+    cursor: pointer;
+    background-color: #01214362;
+}
+
+.active {
+    background-color: var(--main-color);
+    color: white;
+}
+
+/* End Seclect Size */
+
+.small-images::-webkit-scrollbar {
+    width: 2px;
+    height: 2px;
+}
+
+.small-images::-webkit-scrollbar-thumb {
+    background-color: var(--second-color);
+}
+
+
+/* Input Animation Start */
+
+.input-groupe>.input:valid+label,
+.input-groupe>.input:focus+label {
+    background-color: #fff;
+    transform: translate(20px, -40px);
+    font-size: smaller;
+    font-weight: 600;
+    color: var(--main-color);
+}
+
+
+/* Input Animation End */
+
+.side-bar {
+    animation: Entry ease .7s;
+}
+
+@keyframes Entry {
+    from {
+        transform: translateX(-100%);
+    }
+
+    to {
+        transform: translateX(0);
+    }
+}
+
+
+/* DashBord navbar Animation Start*/
+
+.dashbord-path {
+    color: #fff;
+}
+
+.dashbord-path:after {
+    content: "";
+    position: absolute;
+    height: 3px;
+    width: 70%;
+    left: 15%;
+    bottom: 0;
+    background-color: #fff;
+    animation: underLine .2s ease-out;
+}
+
+@keyframes underLine {
+    from {
+        transform: translateX(-100%);
+    }
+
+    to {
+        transform: translateX(0);
+    }
+}
+
+
+/* DashBord navbar Animation End*/
+
+/* /Dashbord/AddShoe start*/
+
+#images>img {
+    border-radius: 1em;
+}
+
+#sizes>button {
+    padding: .25em 1em;
+    background-color: var(--main-color);
+    color: #ddd;
+    border-radius: 1em;
+}
+
+/* /Dashbord/AddShoe end*/
+
+/* /Dashbord/Orders Start*/
+
+.details {
+    animation: open .4s ease;
+}
+
+.details::after {
+    content: "";
+    position: absolute;
+    height: 4em;
+    width: 4em;
+    /* background-color: var(--main-color); */
+    z-index: -1;
+    top: 0;
+    left: 10%;
+    transform: rotateZ(45deg);
+}
+
+@keyframes open {
+    from {
+        transform: scaleY(0);
+    }
+
+    to {
+        transform: scaleY(1);
+    }
+}
+
+/* /Dashbord/Orders End*/
+
+
+/* Successful Operation Start */
+
+.circle::after {
+    content: "";
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    background-color: var(--main-color);
+    animation: down 1s linear;
+}
+
+@keyframes down {
+    from {
+        transform: translateY(-100%);
+    }
+
+    to {
+        transform: translateY(0);
+    }
+}
+
+.circle::before {
+    content: "";
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    background-color: var(--main-color);
+    animation: up 1s linear;
+}
+
+@keyframes up {
+    from {
+        transform: translateY(100%);
+    }
+
+    to {
+        transform: translateY(0);
+    }
+}
+
+
+.mark::after {
+    content: '';
+    position: absolute;
+    width: 2em;
+    height: 10px;
+    background-color: var(--main-color);
+    z-index: 10;
+    border-radius: 20px 0 20px 20px;
+    left: 20%;
+    top: 63.3%;
+    transform: rotateZ(45deg);
+    animation: toright 1s ease;
+}
+
+@keyframes toright {
+    from {
+        transform: translate(-100px, -100px) rotateZ(45deg);
+    }
+
+    to {
+        transform: translate(0, 0) rotateZ(45deg);
+    }
+}
+
+.mark::before {
+    content: '';
+    position: absolute;
+    width: 5em;
+    height: 10px;
+    background-color: var(--main-color);
+    border-radius: 0 20px 20px 0;
+    z-index: 10;
+    left: calc(20% + 1em);
+    top: 50%;
+    transform: rotateZ(-40deg);
+    transition: 2s;
+    animation: toleft 1s ease;
+}
+
+@keyframes toleft {
+    from {
+        transform: translate(100px, -100px) rotateZ(-40deg);
+    }
+
+    to {
+        transform: translate(0, 0) rotateZ(-40deg);
+    }
+}
+
+
+/* Successful Operation End */
