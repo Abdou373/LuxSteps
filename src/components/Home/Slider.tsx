@@ -85,26 +85,26 @@ export default function Slider() {
         <Image
           className="h-full max-sm:h-auto w-full duration-500 opacity-0"
           src={slide1.src}
-          height={100}
-          width={100}
+          height={1000}
+          width={1400}
           alt="" /> {/* for fixing size */}
         <Image
           className="absolute top-0 left-0 h-full w-full duration-500 opacity-100 slide selectR"
           src={slide1.src}
-          height={100}
-          width={100}
+          height={1000}
+          width={1400}
           alt="" />
         <Image
           className="absolute top-0 left-0 h-full w-full duration-500 opacity-100 slide"
           src={slide2.src}
-          height={100}
-          width={100}
+          height={1000}
+          width={1400}
           alt="" />
         <Image
           className="absolute top-0 left-0 h-full w-full duration-500 opacity-100 slide"
           src={slide3.src}
-          height={100}
-          width={100}
+          height={1000}
+          width={1400}
           alt="" />
         <div className="z-20 absolute bottom-5 left-1/2 -translate-x-1/2 flex gap-3 max-sm:gap-2">
           <div className="w-4 h-4 max-sm:h-3 max-sm:w-3 rounded-full border-gray-300 border-solid border-[1px] duration-700 Pellets here"></div>
