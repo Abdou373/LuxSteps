@@ -5,7 +5,7 @@ import Image from "next/image";
 
 
 
-export default async function PlaceOrder({ searchParams, params }: any) {
+export default async function PlaceOrder({ searchParams, params }: { params: Promise<{ id: string }>, searchParams: Promise<{ size: string }> }) {
     const { size } = await searchParams;
     const { id } = await params;
 

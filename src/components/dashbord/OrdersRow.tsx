@@ -1,7 +1,6 @@
 "use client";
 
 import { OrderType } from "@/utils/type"
-import Link from "next/link";
 import { useRef, useState } from "react";
 import { CgDetailsMore } from "react-icons/cg";
 import { MdVerifiedUser } from "react-icons/md";

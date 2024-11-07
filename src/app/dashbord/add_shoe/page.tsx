@@ -5,7 +5,6 @@ import { IoIosAddCircle } from "react-icons/io";
 import { FormEvent, useState } from "react";
 // import axios from "axios";
 // import { DOMAIN } from "@/utils/constants";
-import { useRouter } from "next/navigation";
 
 
 
@@ -17,9 +16,6 @@ export default function AddShoes() {
     const [description, setDesc] = useState("")
     const [image, setImage] = useState("")
     const [size, setSize] = useState("")
-
-    const router = useRouter()
-
 
 
     function addimage(e: FormEvent) {

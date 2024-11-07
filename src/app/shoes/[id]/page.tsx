@@ -1,19 +1,18 @@
 import SelectSize from "@/components/ShoePage/SelectSize";
 import ShoeImgs from "@/components/ShoePage/ShoeImgs";
 import { shoes } from "@/utils/date"
-import { ShoesType } from "@/utils/type";
 
 
-interface Props {
-    params: {
-        id: string,
-    }
-}
+// interface Props {
+//     params: {
+//         id: string,
+//     }
+// }
 
 
-export default async function Shoe({ params }: Props) {
+export default async function Shoe({ params }: { params: Promise<{ id: string }> }) {
 
-    const { id } = await params;
+    const id = (await params).id;
 
     const targetShoe = shoes.filter((s) => {
         if (s.id === parseInt(id)) {

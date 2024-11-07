@@ -1,5 +1,3 @@
-import shoe1 from "@/images/products/Shoe2.png"
-import shoe2 from "@/images/products/Shoe1.png"
 import { ShoesType } from "./type"
 
 

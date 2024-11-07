@@ -1,7 +1,7 @@
 import { ShoesType } from "./type";
 
 export function helfArray(array: ShoesType[]) {
-    const helf: any[] = []
+    const helf: ShoesType[] = []
 
     const helfLength = Math.ceil(array.length / 2)
     for (let i = 0; i < helfLength; i++) {
@@ -12,7 +12,7 @@ export function helfArray(array: ShoesType[]) {
 }
 
 export function restOfArray(array: ShoesType[]) {
-    const rest: any[] = []
+    const rest: ShoesType[] = []
 
     for (let i = array.length / 2; i < array.length; i++) {
         rest.push(array[i]);
