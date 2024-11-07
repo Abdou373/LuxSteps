@@ -61,7 +61,7 @@ export default function Nav() {
           onClick={(e) => ChangePath(e.currentTarget.href)}
           href={"/dashbord/all_shoes"}
           className="relative flex items-center max-sm:p-2 max-sm:gap-2 gap-5 px-5 py-4 text-xl max-md:text-lg font-medium text-[#bbb] hover:text-white duration-100 max-sm:text-base max-sm:mx-2 text-nowrap max-sm:flex-col dashbord-path">
-          {<AiFillProduct className="w-8 h-8 max-sm:w-5 max-sm:h-5" />}<span className={`${open ? "flex" : "hidden"} max-sm:block max-sm:text-sm`}>All Shoes</span>
+          <AiFillProduct className="w-8 h-8 max-sm:w-5 max-sm:h-5" /><span className={`${open ? "flex" : "hidden"} max-sm:block max-sm:text-sm`}>All Shoes</span>
         </Link>
         <Link
           ref={addShoe}
