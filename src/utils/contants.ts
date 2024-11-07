@@ -1,7 +1,8 @@
+const PRODUCTION_DOMAIN = "https://luxsteps.vercel.app"
+const DEVELOPMENT_DOMAIN = "http://localhost:3000"
 
-export const DOMAIN = process.env.NODE_ENV === "development" ?
-    "http://localhost:3000" : "https://luxsteps.vercel.app"
-
+export const DOMAIN = process.env.NODE_ENV === "production" ?
+    PRODUCTION_DOMAIN : DEVELOPMENT_DOMAIN;
 
 
 export const STATES = [
