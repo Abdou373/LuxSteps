@@ -83,7 +83,7 @@ export default function AddShoes() {
     //   }
 
     return (
-        <div className="py-5 px-12 max-sm:px-5">
+        <div className="py-5 px-12 max-sm:px-5 max-md:px-4">
             <h1 className="text-center text-[--second-color] text-2xl font-bold">Add Shoe</h1>
             <div className="flex max-sm:flex-col">
                 <div className="px-4 w-[40%] max-sm:w-full max-sm:p-0">

@@ -1,3 +1,4 @@
+import BackButton from "@/components/BackButton";
 import PlaceOrderForm from "@/components/PlaceOrderForm";
 import { shoes } from "@/utils/date";
 import { ShoesType } from "@/utils/type";
@@ -18,7 +19,7 @@ export default async function PlaceOrder({ searchParams, params }: { params: Pro
 
     return (
         <div className="relative flex px-5 py-5 justify-center min-h-[calc(100vh-76px)] max-sm:flex-col max-sm:gap-3 max">
-            <div >
+            <div>
                 <h1 className="font-semibold text-2xl text-[--main-color] mb-5 text-center">Shoe Information</h1>
                 <div className="max-sm:flex justify-center">
                     <Image className="rounded-lg max-sm:w-1/2 h-auto" src={target[0].imgs[0]} alt="" width={200} height={200} />

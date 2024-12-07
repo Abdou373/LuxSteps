@@ -19,7 +19,7 @@ export default function ShoeImgs({ imgs }: Props1) {
           <SmallImg key={j} image={i} setImage={setImage} />
         )}
       </div>
-      <Image className="rounded-xl h-full w-auto max-lg:h-[calc(100vh-108px)] max-lg:w-auto max-sm:w-full max-sm:h-auto" width={200} height={200} src={image} alt="" priority />
+      <Image className="rounded-xl h-full w-auto max-lg:h-[calc(100vh-108px)] max-lg:w-auto max-md:w-full max-md:h-auto" width={200} height={200} src={image} alt="" priority />
     </div>
   )
 }

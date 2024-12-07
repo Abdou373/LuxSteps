@@ -3,8 +3,7 @@ import { ShoesType } from "./type";
 export function helfArray(array: ShoesType[]) {
     const helf: ShoesType[] = []
 
-    const helfLength = Math.ceil(array.length / 2)
-    for (let i = 0; i < helfLength; i++) {
+    for (let i = 0; i < helfLength(array); i++) {
         helf.push(array[i]);
     }
 
@@ -14,9 +13,14 @@ export function helfArray(array: ShoesType[]) {
 export function restOfArray(array: ShoesType[]) {
     const rest: ShoesType[] = []
 
-    for (let i = array.length / 2; i < array.length; i++) {
+    for (let i = helfLength(array); i < array.length; i++) {
         rest.push(array[i]);
     }
 
     return rest;
+}
+
+
+function helfLength(array: ShoesType[]) {
+    return Math.ceil(array.length / 2)
 }

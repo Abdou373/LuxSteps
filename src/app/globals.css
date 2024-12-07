@@ -8,20 +8,36 @@
 }
 
 
+@layer utilities{
+  .nav-section{
+      @apply px-3 py-2 text-lg font-medium text-[#eee] !important;
+    }
+  .category{
+    @apply py-1 px-5 text-[#333] text-nowrap duration-150 hover:bg-[#ccc] cursor-pointer !important;
+  }
+  .section-heading{
+    @apply text-3xl font-semibold my-5 ml-5 ;
+  }
+}
+
 /* Start Slider Animation */
 
-.selectR,
-.selectL {
+.first {
+    z-index: 5;
+}
+
+.entry-right,
+.entry-left {
     z-index: 3;
 }
 
-.outL,
-.outR {
+.out-left,
+.out-right {
     z-index: 1;
 }
 
 
-.outR {
+.out-right {
     animation: outR .5s ease;
     z-index: 1;
 }
@@ -36,7 +52,7 @@
     }
 }
 
-.outL {
+.out-left {
     animation: outL .5s ease;
 }
 
@@ -50,7 +66,7 @@
     }
 }
 
-.selectL {
+.entry-left {
     animation: entryLeft .5s ease;
 }
 
@@ -64,7 +80,7 @@
     }
 }
 
-.selectR {
+.entry-right {
     animation: entryRight .5s ease;
 }
 
@@ -131,21 +147,6 @@
 
 
 /* Input Animation End */
-
-.side-bar {
-    animation: Entry ease .7s;
-}
-
-@keyframes Entry {
-    from {
-        transform: translateX(-100%);
-    }
-
-    to {
-        transform: translateX(0);
-    }
-}
-
 
 /* DashBord navbar Animation Start*/
 

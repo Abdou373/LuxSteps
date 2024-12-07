@@ -8,7 +8,7 @@ interface Props {
 
 export default function PhoneShoes({ shoes }: Props) {
   return (
-    <div className="min-[426px]:hidden flex p-4 gap-2 bg-[--second-color]">
+    <div className="sm:hidden flex gap-2">
       <div className="flex flex-col w-1/2 gap-2">
         {helfArray(shoes).map((s, i) =>
           <ShoesCard key={i} id={s.id} img={s.imgs[0]} price={s.price} name={s.name} />

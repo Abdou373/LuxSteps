@@ -15,25 +15,34 @@ export default function Slider() {
   function toLeft() {
     const slides = document.querySelectorAll(".slide");
 
+    if (slides[0].classList.contains("first")) {
+      slides[0].classList.replace("first", "outR");
+      slides[slides.length - 1].classList.add("entry-left");
+      setTimeout(() => {
+        slides[0].classList.remove("outR");
+      }, 500);
+      return;
+    }
+
     for (let i = 0; i < slides.length; i++) {
-      if (slides[i].classList.contains("selectR") || slides[i].classList.contains("selectL")) {
+      if (slides[i].classList.contains("entry-right") || slides[i].classList.contains("entry-left")) {
         const pellets = document.querySelectorAll(".Pellets");
         document.querySelector(".here")?.classList.remove("here")
         pellets[i - 1]?.classList.add("here")
 
 
-        slides[i].classList.remove("selectR");
-        slides[i].classList.remove("selectL");
+        slides[i].classList.remove("entry-right");
+        slides[i].classList.remove("entry-left");
         slides[i].classList.add("outR");
         if (i === 0) {
-          slides[slides.length - 1].classList.add("selectL")
+          slides[slides.length - 1].classList.add("entry-left")
           setTimeout(() => {
             slides[i].classList.remove("outR")
           }, 500);
           pellets[slides.length - 1].classList.add("here")
           break;
         } else {
-          slides[i - 1].classList.add("selectL");
+          slides[i - 1].classList.add("entry-left");
           setTimeout(() => {
             slides[i].classList.remove("outR")
           }, 500);
@@ -45,30 +54,35 @@ export default function Slider() {
   function toRight() {
     const slides = document.querySelectorAll(".slide");
 
+    if (slides[0].classList.contains("first")) {
+      slides[0].classList.replace("first", "out-left")
+      slides[1].classList.add("entry-right")
+      setTimeout(() => {
+        slides[0].classList.remove("out-left");
+      }, 500);
+      return;
+    }
 
     for (let i = 0; i < slides.length; i++) {
-      if (slides[i].classList.contains("selectR") || slides[i].classList.contains("selectL")) {
+      if (slides[i].classList.contains("entry-right") || slides[i].classList.contains("entry-left")) {
         const pellets = document.querySelectorAll(".Pellets");
         document.querySelector(".here")?.classList.remove("here")
         pellets[i + 1]?.classList.add("here")
 
-
-
-        slides[i].classList.remove("selectR");
-        slides[i].classList.remove("selectL");
-        slides[i].classList.add("outL")
+        slides[i].classList.remove("entry-right");
+        slides[i].classList.remove("entry-left");
+        slides[i].classList.add("out-left")
         if (i === slides.length - 1) {
-          slides[0].classList.add("selectR")
+          slides[0].classList.add("entry-right")
           setTimeout(() => {
-            slides[i].classList.remove("outL")
+            slides[i].classList.remove("out-left")
           }, 500)
           pellets[0].classList.add("here")
           break;
         } else {
-
-          slides[i + 1].classList.add("selectR");
+          slides[i + 1].classList.add("entry-right");
           setTimeout(() => {
-            slides[i].classList.remove("outL")
+            slides[i].classList.remove("out-left")
           }, 500)
           break;
         }
@@ -80,17 +94,18 @@ export default function Slider() {
     <div className="relative w-full h-[calc(100vh-76px)] max-sm:h-auto overflow-hidden" >
       <div className="relative flex items-center gap-10  w-full h-full overflow-hidden">
         <Image
-          className="h-full max-sm:h-auto w-full duration-500 opacity-0"
+          className="h-full max-sm:h-auto w-full duration-500 -z-10 opacity-0"
           src={slide1.src}
           height={1000}
           width={1400}
           alt="" /> {/* for fixing size */}
         <Image
-          className="absolute top-0 left-0 h-full w-full duration-500 opacity-100 slide selectR"
+          className="absolute top-0 left-0 h-full w-full duration-500 opacity-100 slide first"
           src={slide1.src}
           height={1000}
           width={1400}
-          alt="" />
+          alt=""
+          priority />
         <Image
           className="absolute top-0 left-0 h-full w-full duration-500 opacity-100 slide"
           src={slide2.src}

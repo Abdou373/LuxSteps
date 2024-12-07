@@ -45,7 +45,7 @@ export default function SelectSize({ id, sizes }: Props) {
         {info && (<p className="flex items-center gap-2 ml-3 text-blue-900 font-medium">
           <BsFillInfoCircleFill /> Veuillez sélectionner un taille</p>)}
       </div >
-      <div className="w-full text-center mt-4">
+      <div className="w-full text-center my-10">
         <button onClick={ClickForOrder} className="bg-[--second-color] text-[#ddd] py-2 px-10 rounded-lg">Commandez maintenant</button>
       </div>
     </div>

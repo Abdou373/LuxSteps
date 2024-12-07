@@ -12,6 +12,7 @@ export type ShoesType = {
     description: string,
     imgs: string[]
     sizes: number[]
+    category: string
 }
 
 
