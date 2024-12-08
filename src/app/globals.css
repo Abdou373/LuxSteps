@@ -20,6 +20,14 @@
   }
 }
 
+.horizontal_shoe:hover > button,
+.horizontal_shoe:hover > a{
+  opacity: 1;
+}
+
+
+
+/* Old style */
 /* Start Slider Animation */
 
 .first {

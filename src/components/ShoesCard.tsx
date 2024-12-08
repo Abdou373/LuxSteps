@@ -1,20 +1,26 @@
 import Link from "next/link";
 import Image from "next/image";
 import { ShoesCardType } from "@/utils/type";
+import shoes2 from "@/images/products/Shoe2.png"
 
 
 
 
 export default function ShoesCard({ id, img, price, name }: ShoesCardType) {
   return (
-    <Link href={`/shoes/${id}`} className="relative bg-[#fff] rounded-lg hover:shadow-[0_0_20px_0_#333] hover:scale-105 hover:z-10 hover:bg-[#eee] duration-200">
-      <div>
-        <Image className="rounded-lg w-full" width={300} height={300} src={img} alt="" />
+    <div className="bg-[#fff] rounded-10 hover:bg-[#eee] duration-200">
+      <Link href={``} className="">
+        <Image className="w-full" width={300} height={200} src={shoes2} alt="" />
+      </Link>
+      <div className="px-4 py-2">
+        <div className="flex justify-between">
+          <p className="text-lg font-medium text-[#333]">{name}</p>
+          <h3 className="font-semibold text-xl">{price}.00 $</h3>
+        </div>
+        <div className="text-center mt-5">
+          <button className="px-5 py-1 bg-secondary text-[#eee] font-semibold rounded-10">Add to Cart</button>
+        </div>
       </div>
-      <div className="pt-2 pb-4 px-4">
-        <h3 className="font-semibold text-xl pl-2">{price} <span className="text-sm">DA</span></h3>
-        <p className="text-[#333]">{name}</p>
-      </div>
-    </Link>
+    </div>
   )
 }
