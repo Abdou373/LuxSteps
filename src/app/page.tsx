@@ -22,23 +22,25 @@ export default function Home() {
         <h1 className="section-heading">More</h1>
         <div className="grid grid-cols-4 gap-4 2xl:grid-cols-5 max-md:grid-cols-3 max-md:px-5 max-[425px]:hidden">
           {shoes.map((s, i) =>
-            <>
-              <ShoesCard key={i} id={s.id} name={s.name} price={s.price} img={s.imgs[0]} />
-              <div className="overflow-hidden bg-[#fff] rounded-10 hover:bg-[#eee] duration-200">
-                <Link href={``}>
-                  <Image className="w-full" width={300} height={200} src={shoes1} alt="" />
-                </Link>
-                <div className="px-4 py-2">
-                  <div className="flex justify-between">
-                    <p className="text-lg font-medium text-[#333]">{s.name}</p>
-                    <h3 className="font-semibold text-xl">{s.price}.00 $</h3>
-                  </div>
-                  <div className="text-center mt-5">
-                    <button className="px-5 py-1 bg-secondary text-[#eee] font-semibold rounded-10">Add to Cart</button>
-                  </div>
-                </div>
-              </div>
-            </>
+
+            <ShoesCard key={i} id={s.id} name={s.name} price={s.price} img={s.imgs[0]} />
+
+            // <div className="overflow-hidden bg-[#fff] rounded-10 hover:bg-[#eee] duration-200">
+            //   <Link href={``}>
+            //     <Image className="w-full" width={300} height={200} src={shoes1} alt="" />
+            //   </Link>
+            //   <div className="px-4 py-2">
+            //     <div className="flex justify-between">
+            //       <p className="text-lg font-medium text-[#333]">{s.name}</p>
+            //       <h3 className="font-semibold text-xl">{s.price}.00 $</h3>
+            //     </div>
+            //     <div className="text-center mt-5">
+            //       <button className="px-5 py-1 bg-secondary text-[#eee] font-semibold rounded-10">Add to Cart</button>
+            //     </div>
+            //   </div>
+            // </div>
+
+
           )}
         </div>
       </main>

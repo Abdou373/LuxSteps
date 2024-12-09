@@ -3,14 +3,14 @@ import Image from 'next/image'
 import shoe from "@/images/products/Shoe2.png";
 import { TiShoppingCart } from 'react-icons/ti';
 
-export default function HorizontalShoe({ name, price }: { price: number, name: string }) {
+export default function HorizontalShoe({ image, name, price }: { image: string, price: number, name: string }) {
 
   return (
     <div className='snap-center overflow-hidden min-w-[20%] relative horizontal_shoe rounded-10'>
 
       <Image className="w-full" width={300} height={200} src={shoe} alt='' />
 
-      <Link href={"#"} className='opacity-0 duration-200 absolute top-0 left-0 w-full h-full backdrop-blur-sm bg-black/30 px-4 py-2'>
+      <Link href={"shoes/1"} className='opacity-0 duration-200 absolute top-0 left-0 w-full h-full backdrop-blur-sm bg-black/30 px-4 py-2'>
         <h3 className='text-xl font-medium text-[#333]'>{name}</h3>
         <h3 className='my-5 text-center text-2xl font-bold text-[#eee]'>{price} $</h3>
       </Link>

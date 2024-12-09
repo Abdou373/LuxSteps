@@ -1,7 +1,6 @@
 "use client";
 
 import { shoes } from '@/utils/date';
-import Image from 'next/image';
 import { useRef } from 'react';
 import { FaAngleLeft } from "react-icons/fa";
 import { FaAngleRight } from "react-icons/fa";
@@ -16,15 +15,8 @@ export default function HorizontalShoes() {
     <div className='relative'>
       <div ref={wriper} className="flex gap-4 overflow-hidden snap-proximity snap-x">
         {shoes.map((s, i) =>
-          <HorizontalShoe key={i} price={s.price} name={s.name} />
+          <HorizontalShoe key={i} image={s.imgs[0]} price={s.price} name={s.name} />
         )}
-        {/* adding a new component for single shoes */}
-        {/* <div className="snap-center overflow-hidden rounded-10 min-w-[300px] h-[150px] bg-slate-800"></div>
-        <div className="snap-center overflow-hidden rounded-10 min-w-[300px] h-[150px] bg-slate-800"></div>
-        <div className="snap-center overflow-hidden rounded-10 min-w-[300px] h-[150px] bg-slate-800"></div>
-        <div className="snap-center overflow-hidden rounded-10 min-w-[300px] h-[150px] bg-slate-800"></div>
-        <div className="snap-center overflow-hidden rounded-10 min-w-[300px] h-[150px] bg-slate-800"></div>
-        <div className="snap-center overflow-hidden rounded-10 min-w-[300px] h-[150px] bg-slate-800"></div> */}
       </div>
       <button onClick={() => { wriper.current?.scrollBy({ left: 900, behavior: "smooth" }) }} className="absolute  top-1/2 -translate-y-1/2 right-0 translate-x-1/2 size-16 rounded-full bg-black/20 border border-[#aaa] border-solid flex justify-center items-center">
         <FaAngleRight className='text-white opacity-70 size-2/3' />

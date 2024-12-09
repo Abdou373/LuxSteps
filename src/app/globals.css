@@ -7,6 +7,16 @@
     --second-color: #012143ad;
 }
 
+/* body & *::-webkit-scrollbar {
+    width: 2px;
+    height: 2px;
+}
+
+body ~ *::-webkit-scrollbar-thumb {
+    background-color: var(--second-color);
+} */
+
+
 
 @layer utilities{
   .nav-section{
