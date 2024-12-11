@@ -8,7 +8,7 @@ import shoes2 from "@/images/products/Shoe2.png"
 
 export default function ShoesCard({ id, img, price, name }: ShoesCardType) {
   return (
-    <div className="bg-[#fff] rounded-10 hover:bg-[#eee] duration-200">
+    <div className="bg-[#fff] rounded-10 overflow-hidden hover:bg-[#eee] duration-200">
       <Link href={``} className="">
         <Image className="w-full" width={300} height={200} src={shoes2} alt="" />
       </Link>

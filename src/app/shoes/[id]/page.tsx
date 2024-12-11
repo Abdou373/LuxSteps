@@ -48,7 +48,7 @@ export default async function Shoe({ params }: { params: Promise<{ id: string }>
                     <h3 className="text-lg font-medium mx-4 my-2">Sizes :</h3>
                     <div className="flex gap-2 overflow-auto">
                         {numbers.map((i) =>
-                            <button className="bg-[#CDD7E2] rounded-10 border border-[#aaa] border-solid px-4 py-2">39</button>
+                            <button key={i} className="bg-[#CDD7E2] rounded-10 border border-[#aaa] border-solid px-4 py-2">39</button>
                         )}
                     </div>
                 </div>
