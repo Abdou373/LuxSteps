@@ -28,6 +28,23 @@ body ~ *::-webkit-scrollbar-thumb {
   .section-heading{
     @apply text-3xl font-semibold my-5 ml-5 ;
   }
+  .place_order-input{
+    @apply text-lg px-4 py-2 rounded-10 outline-none border border-[#333] border-solid w-full;
+  }
+  .place_order-label{
+    @apply absolute left-4 top-1/2 -translate-y-1/2 px-2 font-semibold text-[#585858] select-none bg-label duration-150;
+  }
+  .bg-label{
+    background-image: linear-gradient(to top, #FFFFFFFF 25%, transparent 25%);
+  }
+}
+
+
+
+.place_order-input:focus + label,
+.place_order-input:valid + label{
+    transform: translateY(-38px);
+    font-size: small;
 }
 
 .horizontal_shoe:hover > button,

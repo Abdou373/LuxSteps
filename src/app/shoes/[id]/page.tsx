@@ -8,11 +8,14 @@ import Image from "next/image";
 import shoe1 from "@/images/products/Shoe1.jpg"
 import shoe2 from "@/images/products/Shoe2.png"
 import { TiShoppingCart } from "react-icons/ti";
+import Link from "next/link";
+import PlaceOrderModel from "@/components/ShoePage/PlaceOrderModel";
 
 
-export default async function Shoe({ params }: { params: Promise<{ id: string }> }) {
+export default async function Shoe({ params, searchParams }: { searchParams: Promise<{ size: string }>, params: Promise<{ id: string }> }) {
 
-    // const id = (await params).id;
+    const { id } = await params;
+    const { size } = await searchParams;
 
     // const targetShoe = shoes.filter((s) => {
     //     if (s.id === parseInt(id)) {
@@ -26,8 +29,9 @@ export default async function Shoe({ params }: { params: Promise<{ id: string }>
     //     }
     // })
     const numbers = [1, 2, 3, 4, 5, 6, 7, 8]
+
     return (
-        <div className="flex gap-5 px-10 py-5">
+        <div className="relative flex gap-5 px-10 py-5">
             <div className="flex flex-col gap-2 w-[10%] overflow-auto h-[50vh] my-2">
                 {numbers.map((i) =>
                     <div key={i}>
@@ -53,13 +57,16 @@ export default async function Shoe({ params }: { params: Promise<{ id: string }>
                     </div>
                 </div>
                 <div className="w-full flex flex-col items-center gap-2 mt-20">
-                    <button className="w-2/3 bg-primary font-semibold text-lg rounded-10 text-[#eee] py-2">Buy now</button>
+                    <Link href={"?size=40"} className="text-center w-2/3 bg-primary font-semibold text-lg rounded-10 text-[#eee] py-2">Buy now</Link>
                     <button className="w-2/3 bg-secondary font-semibold text-lg rounded-10 text-[#eee] py-2 flex items-center justify-center gap-2">
                         Add to Cart
                         <TiShoppingCart className="size-6 text-[#eee]" />
                     </button>
                 </div>
             </div>
+            {size && (
+                <PlaceOrderModel id={id} name="Nike Airmax 90" price={400} size={size} />
+            )}
         </div>
     )
 }
