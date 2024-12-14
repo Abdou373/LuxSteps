@@ -20,7 +20,7 @@ export default function Home() {
         <h2 className="section-heading">Sold Shoes</h2>
         <HorizontalShoes />
         <h1 className="section-heading">More</h1>
-        <div className="grid grid-cols-4 gap-4 2xl:grid-cols-5 max-md:grid-cols-3 max-md:px-5 max-[425px]:hidden">
+        <div className="grid-container">
           {shoes.map((s, i) =>
 
             <ShoesCard key={i} newPrice={s.newPrice} id={s.id} name={s.name} price={s.price} rating={s.rating} reviews={s.reviews} img={s.imgs[0]} />

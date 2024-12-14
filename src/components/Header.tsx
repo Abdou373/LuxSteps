@@ -6,7 +6,7 @@ import logo from "@/images/logo-no-background.png";
 
 export default function Header() {
   return (
-    <div className="flex justify-between items-center bg-primary py-2 px-8 shadow-lg shadow-gray-500 z-50 max-md:px-4">
+    <div className="flex justify-between items-center bg-primary py-2 px-8 shadow-lg shadow-gray-500 z-50 max-md:px-4 sticky">
       <div className="">
         <Link href={"/"}>
           <Image width={165} height={200} src={logo} alt="" />

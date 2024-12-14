@@ -40,6 +40,9 @@ body ~ *::-webkit-scrollbar-thumb {
   .bg-label{
     background-image: linear-gradient(to top, #FFFFFFFF 25%, transparent 25%);
   }
+  .grid-container{
+    @apply grid grid-cols-4 gap-4 2xl:grid-cols-5 max-md:grid-cols-3 max-md:px-5 max-[425px]:hidden;
+  }
 }
 
 .place_order-input:focus + label,

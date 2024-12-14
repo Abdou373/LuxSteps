@@ -31,8 +31,8 @@ export default function SecondHeader() {
     <>
       <div className="sticky top-0 left-0 w-full py-2 px-[2%] flex items-center justify-between bg-[#001127] bg-opacity-50 backdrop-blur z-50 max-md:justify-evenly">
         <div className="flex gap-2 flex-nowrap max-md:hidden">
-          <Link className="nav-section" href={"#"}>New</Link>
-          <Link className="nav-section" href={"#"}>Sold</Link>
+          <Link className="nav-section" href={"/shoes/new"}>New</Link>
+          <Link className="nav-section" href={"/shoes/sale"}>Sale</Link>
           <div onClick={() => setCatigory(true)} className="nav-section relative flex items-center cursor-pointer">
             Catigories <HiChevronDown className={`${catigory && "rotate-180"} duration-200 w-fit`} />
             {catigory && (
@@ -44,7 +44,7 @@ export default function SecondHeader() {
             )}
           </div>
           {catigory && <div onClick={() => setCatigory(false)} className="absolute z-20 w-full h-screen left-0 top-0"></div>}
-          <Link className="nav-section" href={"/dashbord/all_shoes"}>Dashboard</Link>
+          <Link className="nav-section" href={"/dashbord"}>Dashboard</Link>
         </div>
 
         {/* <FiMenu onClick={() => sidebarOpen()} className="md:hidden w-7 h-7 ml-[5%] mr-2 text-[#ddd] max-[425]: ml-" /> */}
