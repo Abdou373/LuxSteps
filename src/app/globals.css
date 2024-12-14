@@ -20,8 +20,11 @@ body ~ *::-webkit-scrollbar-thumb {
 
 @layer utilities{
   .nav-section{
-      @apply px-3 py-2 text-lg font-medium text-[#eee] !important;
-    }
+    @apply px-2 py-2  font-medium text-[#eee] !important;
+  }
+  .categories{
+    @apply absolute top-full left-1/2 flex flex-col z-30 bg-[#eee] rounded-10 py-2 after:content-[""] after:absolute after:-z-[1] after:top-0 after:left-[10%] after:rotate-45 after:bg-[#eee] after:h-7 after:w-7;
+  }
   .category{
     @apply py-1 px-5 text-[#333] text-nowrap duration-150 hover:bg-[#ccc] cursor-pointer !important;
   }
@@ -38,8 +41,6 @@ body ~ *::-webkit-scrollbar-thumb {
     background-image: linear-gradient(to top, #FFFFFFFF 25%, transparent 25%);
   }
 }
-
-
 
 .place_order-input:focus + label,
 .place_order-input:valid + label{
@@ -230,31 +231,8 @@ body ~ *::-webkit-scrollbar-thumb {
 
 /* /Dashbord/Orders Start*/
 
-.details {
-    animation: open .4s ease;
-}
 
-.details::after {
-    content: "";
-    position: absolute;
-    height: 4em;
-    width: 4em;
-    /* background-color: var(--main-color); */
-    z-index: -1;
-    top: 0;
-    left: 10%;
-    transform: rotateZ(45deg);
-}
 
-@keyframes open {
-    from {
-        transform: scaleY(0);
-    }
-
-    to {
-        transform: scaleY(1);
-    }
-}
 
 /* /Dashbord/Orders End*/
 

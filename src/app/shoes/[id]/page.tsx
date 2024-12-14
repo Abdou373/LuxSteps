@@ -10,6 +10,7 @@ import shoe2 from "@/images/products/Shoe2.png"
 import { TiShoppingCart } from "react-icons/ti";
 import Link from "next/link";
 import PlaceOrderModel from "@/components/ShoePage/PlaceOrderModel";
+import { FaRegStar, FaStar, FaStarHalfAlt } from "react-icons/fa";
 
 
 export default async function Shoe({ params, searchParams }: { searchParams: Promise<{ size: string }>, params: Promise<{ id: string }> }) {
@@ -28,7 +29,10 @@ export default async function Shoe({ params, searchParams }: { searchParams: Pro
     //         return s.category === targetShoe[0].category;
     //     }
     // })
+
+    const shoe = shoes.at(parseInt(id) - 1)
     const numbers = [1, 2, 3, 4, 5, 6, 7, 8]
+
 
     return (
         <div className="relative flex gap-5 px-10 py-5">
@@ -44,15 +48,43 @@ export default async function Shoe({ params, searchParams }: { searchParams: Pro
             </div>
             <div className="w-[28%] py-2">
                 <div className="px-3 flex justify-between">
-                    <h1 className="text-xl font-semibold text-[#333]">Nike Air max 95</h1>
-                    <h1 className="text-xl font-bold">300.00 $</h1>
+                    <div>
+                        <h1 className="text-xl font-semibold text-[#333] flex items-center">
+                            {shoe?.name}
+                            {shoe?.newPrice && (
+                                <span className="mx-2 text-red-400 text-sm">-{Math.floor(100 - (((shoe?.newPrice || 0) * 100) / (shoe?.price || 0)))}%</span>
+                            )}
+                        </h1>
+                        <div className="flex my-3">
+                            {[...Array(Math.floor(shoe?.rating || 0))].map((n, i) =>
+                                <FaStar key={i} color="#df7606" />
+                            )}
+                            {(shoe?.rating || 0) - Math.floor(shoe?.rating || 0) != 0 && (
+                                <FaStarHalfAlt color="#df7606" />
+                            )}
+                            {[...Array(5 - Math.ceil(shoe?.rating || 0))].map((n, i) =>
+                                <FaRegStar key={i} color="#df7606" />
+                            )}
+                            <p className="text-sm mx-2"><span className="font-medium mx-1">{shoe?.reviews}</span>reviews</p>
+                        </div>
+                    </div>
+                    <div>
+                        {shoe?.newPrice ? (
+                            <>
+                                <h1 className="text-xl font-bold">{shoe?.newPrice}.00 $</h1>
+                                <h1 className="text-lg text-[#555] font-bold line-through">{shoe?.price}.00 $</h1>
+                            </>
+                        ) : (
+                            <h1 className="text-xl font-bold">{shoe?.price}.00 $</h1>
+                        )}
+                    </div>
                 </div>
                 <p className="text-sm text-slate-600 my-2">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Tempore eum laudantium placeat! Eligendi, temporibus ullam? Laudantium, soluta in dicta veniam enim nemo sint molestiae reprehenderit voluptatem, alias culpa inventore quas.</p>
                 <div>
                     <h3 className="text-lg font-medium mx-4 my-2">Sizes :</h3>
                     <div className="flex gap-2 overflow-auto">
-                        {numbers.map((i) =>
-                            <button key={i} className="bg-[#CDD7E2] rounded-10 border border-[#aaa] border-solid px-4 py-2">39</button>
+                        {shoe?.sizes.map((size, i) =>
+                            <button key={i} className="bg-[#CDD7E2] rounded-10 border border-[#aaa] border-solid px-4 py-2">{size}</button>
                         )}
                     </div>
                 </div>

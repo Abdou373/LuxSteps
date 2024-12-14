@@ -23,7 +23,7 @@ export default function Home() {
         <div className="grid grid-cols-4 gap-4 2xl:grid-cols-5 max-md:grid-cols-3 max-md:px-5 max-[425px]:hidden">
           {shoes.map((s, i) =>
 
-            <ShoesCard key={i} id={s.id} name={s.name} price={s.price} img={s.imgs[0]} />
+            <ShoesCard key={i} newPrice={s.newPrice} id={s.id} name={s.name} price={s.price} rating={s.rating} reviews={s.reviews} img={s.imgs[0]} />
 
             // <div className="overflow-hidden bg-[#fff] rounded-10 hover:bg-[#eee] duration-200">
             //   <Link href={``}>
