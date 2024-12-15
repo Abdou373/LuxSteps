@@ -36,7 +36,17 @@ export default function PlaceOrderModel({ size, name, price, id }: { size: strin
               className='place_order-input'
               required
             />
-            <label className='place_order-label' htmlFor="city">The City</label>
+            <label className='place_order-label' htmlFor="city">The State</label>
+          </div>
+
+          <div className='relative w-full'>
+            <input
+              id='state'
+              type="text"
+              className='place_order-input'
+              required
+            />
+            <label className='place_order-label' htmlFor="state">The City</label>
           </div>
 
           <div className='relative w-full'>

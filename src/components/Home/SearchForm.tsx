@@ -20,7 +20,7 @@ export default function SearchForm() {
         className="w-full max-[425px]:w-full max-sm:px-3 max-sm:text-sm px-5 py-2 rounded-10 outline-none"
         type="text"
         placeholder="Find your shoes..." />
-      <button className="absolute left-full -translate-x-full rounded-r-10 bg-[#aaa] outline-none p-2 text-[#333]"><LuSearch className="size-6" /></button>
+      <button className="absolute left-full -translate-x-full rounded-r-10 bg-[#aaa] outline-none p-2 text-[#333]"><LuSearch className="size-6 text-[#555]" /></button>
     </form>
   )
 }

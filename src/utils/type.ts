@@ -28,7 +28,8 @@ export type OrderType = {
     phone: string,
     state: string,
     city: string,
-    price: string,
-    size: string,
+    address: string,
+    price: number,
+    size: number,
     shoe: ShoesCardType
 }
