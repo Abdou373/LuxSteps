@@ -9,12 +9,7 @@ import { TbTruckDelivery } from "react-icons/tb";
 
 
 
-
-interface Props {
-  order: OrderType,
-}
-
-export default function OrdersRow({ order }: Props) {
+export default function OrdersRow({ order }: { order: OrderType }) {
   const [open, setOpen] = useState(false)
   const details = useRef<HTMLDivElement>(null)
   const row = useRef<HTMLDivElement>(null)
