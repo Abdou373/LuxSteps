@@ -17,7 +17,7 @@ import logo from "@/images/Logo.png";
 
 export default function Footer() {
   return (
-    <div className="px-10 py-5 bg-primary">
+    <div className="px-10 py-5 bg-gradient-to-b from-bgPrimary-from to-bgPrimary-to">
       <div className="flex justify-between pb-4 max-[425px]:flex-col max-[425px]:items-center max-[425px]:gap-4">
         <div >
           <Image src={logo} width={200} height={120} alt="" />

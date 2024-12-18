@@ -43,6 +43,18 @@ body ~ *::-webkit-scrollbar-thumb {
   .grid-container{
     @apply grid grid-cols-4 gap-4 2xl:grid-cols-5 max-md:grid-cols-3 max-md:px-5 max-[425px]:hidden;
   }
+
+  .dashboard-section{
+    @apply text-5xl font-semibold mb-4;
+  }
+
+  /* Dashboard model */
+  .row-navigation{
+    @apply absolute flex-col items-center left-[10%] top-[calc(100%+5px)] py-2 w-1/3 max-sm:w-1/2 z-20 bg-bgPrimary-to rounded-2xl after:absolute after:-z-[1] after:top-0 after:left-[10%] after:rotate-45 after:bg-bgPrimary-to after:h-10 after:w-10;
+  }
+  .status_btn{
+    @apply w-full flex justify-center items-center hover:bg-bgPrimary-from/60 gap-5 py-2 cursor-pointer font-normal text-lg duration-200 rounded-10;
+  }
 }
 
 .place_order-input:focus + label,

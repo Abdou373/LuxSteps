@@ -10,7 +10,11 @@ const config: Config = {
     extend: {
       colors: {
         primary: "#122466",
-        secondary: "#7B8FA4"
+        secondary: "#7B8FA4",
+        bgPrimary: {
+          from: "#39405B",
+          to: "#212534"
+        }
       },
       borderRadius: {
         '10': "10px",

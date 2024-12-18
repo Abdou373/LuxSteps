@@ -2,8 +2,7 @@ import Link from "next/link";
 import Image from "next/image";
 import { ShoesCardType } from "@/utils/type";
 import shoes2 from "@/images/products/Shoe2.png";
-import { CiStar } from "react-icons/ci";
-import { FaRegStar, FaStar, FaStarHalf, FaStarHalfAlt } from "react-icons/fa";
+import { FaRegStar, FaStar, FaStarHalfAlt } from "react-icons/fa";
 import { TiShoppingCart } from "react-icons/ti";
 
 
@@ -15,7 +14,6 @@ export default function ShoesCard({ id, img, price, name, rating, newPrice, revi
 
   const rest = rating - integerPart;
 
-  // console.log(newPrice)/
 
   return (
     <div className="relative bg-[#fff] rounded-10 overflow-hidden hover:bg-[#eee] duration-200">
@@ -38,18 +36,18 @@ export default function ShoesCard({ id, img, price, name, rating, newPrice, revi
         </div>
         <div className="flex items-center">
           {reviews > 4 && (
-            <>
+            <div className="flex text-[#df7606]">
               {[...Array(integerPart)].map((n, i) =>
-                <FaStar key={i} color="#df7606" />
+                <FaStar key={i} />
               )}
               {rest !== 0 && (
-                <FaStarHalfAlt color="#df7606" className="w-fit" />
+                <FaStarHalfAlt />
               )}
               {[...Array(5 - Math.ceil(rating))].map((n, i) =>
-                <FaRegStar key={i} color="#df7606" />
+                <FaRegStar key={i} />
               )}
-              <p className="mx-2 text-sm"><span className="mx-1 font-medium">{reviews}</span>reviews</p>
-            </>
+              <p className="mx-2 text-sm text-[#585858]"><span className="mx-1 font-medium">{reviews}</span>reviews</p>
+            </div>
           )}
         </div>
         <div className="flex justify-center mt-5">

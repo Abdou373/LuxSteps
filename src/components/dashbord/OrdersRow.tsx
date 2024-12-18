@@ -2,37 +2,33 @@
 
 import { OrderType } from "@/utils/type"
 import { useRef, useState } from "react";
-import { CgDetailsMore } from "react-icons/cg";
+import { CgDetailsMore, CgRemove } from "react-icons/cg";
 import { MdVerifiedUser } from "react-icons/md";
-import { TbTruckDelivery } from "react-icons/tb";
+import { TbFlagCancel, TbTruckDelivery } from "react-icons/tb";
+import Image from "next/image";
+import shoe1 from '@/images/products/Shoe1.jpg';
+import shoe2 from '@/images/products/Shoe2.png';
+import { IoMdCheckmarkCircleOutline } from "react-icons/io";
 
 
 
 
 export default function OrdersRow({ order }: { order: OrderType }) {
   const [open, setOpen] = useState(false)
-  const details = useRef<HTMLDivElement>(null)
+  const model = useRef<HTMLDivElement>(null);
   const row = useRef<HTMLDivElement>(null)
 
   function Open() {
-    const models = document.querySelectorAll(".details");
-    models.forEach((m) => {
-      m.classList.replace("flex", "hidden");
-    })
-    details.current?.classList.replace("hidden", "flex");
-    row.current?.classList.add("shadow-[0_0_20px_0_black]");
+    model.current?.classList.replace("hidden", "flex");
+    row.current?.classList.add("shadow-[0_0_20px_0_#333]");
     row.current?.classList.add("bg-gray-300");
-
     setOpen(true)
   }
 
 
   function Close() {
-    const models = document.querySelectorAll(".details");
-    models.forEach((m) => {
-      m.classList.replace("flex", "hidden")
-    })
-    row.current?.classList.remove("shadow-[0_0_20px_0_black]");
+    model.current?.classList.replace("flex", "hidden")
+    row.current?.classList.remove("shadow-[0_0_20px_0_#333]");
     row.current?.classList.remove("bg-gray-300");
     setOpen(false)
   }
@@ -40,17 +36,28 @@ export default function OrdersRow({ order }: { order: OrderType }) {
 
   return (
     <>
-      <div ref={row} onClick={() => Open()} className="relative cursor-pointer flex justify-between items-center bg-gray-200 p-3 rounded-2xl hover:bg-gray-300 duration-200 max-sm:p-2">
-        <h3 className="font-semibold text-lg w-[30%] text-[#333] max-sm:text-base">{order.client}</h3>
-        <p className="text-sm w-[15%] max-md:hidden">{order.phone}</p>
-        <h2 className="font-semibold text-xl w-[20%] text-[--second-color] max-sm:text-base">{order.state}</h2>
-        <h3 className="text-lg w-[20%] max-sm:hidden">{order.shoe.name}</h3>
-        <button className="text-sm w-[15%] max-sm:text-xs max-sm:w-auto">2024-11-04 10:21 AM</button>
-        <div ref={details} className="absolute flex-col items-center left-[10%] top-[calc(100%+10px)] py-2 w-1/3 max-sm:w-1/2 z-20 bg-[--main-color] rounded-3xl after:bg-[--main-color] details hidden">
-          <div className="flex items-center gap-5 py-2 cursor-pointer font-semibold text-lg text-[#ddd]" >Details <CgDetailsMore /></div>
-          <div className="flex items-center gap-5 py-2 cursor-pointer font-semibold text-lg text-sky-500">Confarmed <MdVerifiedUser /></div>
-          <div className="flex items-center gap-5 py-2 cursor-pointer font-semibold text-lg text-green-400">Delivered <TbTruckDelivery /></div>
+      <div ref={row} onClick={() => Open()} className="relative cursor-pointer flex justify-between items-center bg-[#eee] rounded-10 hover:bg-gray-300 duration-200">
+        <Image className="rounded-10" src={shoe2} width={150} height={100} alt="" />
+        <div className="flex-grow flex justify-around items-center text-center">
+          <div className="w-1/4 flex flex-col justify-center gap-2">
+            <h2 className="text-xl font-medium">{order.shoe.name}</h2>
+            <h2 className="text-sm">size :<span className="mx-2 font-medium">{order.size}</span></h2>
+          </div>
+          <div className="w-1/4 flex flex-col justify-center">
+            <h3 className="text-xl font-medium text-[#555]">{order.client}</h3>
+            <p className="text-[#333] font-light">{order.phone}</p>
+          </div>
+          <h2 className="w-1/4 text-xl font-medium">{order.price}.00 $</h2>
+          <h2 className="w-1/4 text-xl font-bold uppercase text-primary">{order.state}</h2>
         </div>
+
+        <div ref={model} className="row-navigation hidden">
+          <div className="status_btn text-[#ddd] " >Details</div>
+          <div className="status_btn text-[#eee] ">Confarmed</div>
+          <div className="status_btn text-green-400 ">Completed <IoMdCheckmarkCircleOutline /></div>
+          <div className="status_btn text-red-400 ">Cenceled <CgRemove /></div>
+        </div>
+
       </div>
       {open && <div onClick={() => Close()} className="absolute w-full h-full top-0 left-0 z-10"></div>}
     </>
