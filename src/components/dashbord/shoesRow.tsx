@@ -34,12 +34,12 @@ export default function ShoesRow({ shoe }: { shoe: ShoesType }) {
   return (
     <>
       <div
-        ref={row} onClick={() => Open()} className="relative cursor-pointer flex justify-between bg-[#eee] rounded-10 hover:bg-gray-300 duration-200">
+        ref={row} onClick={() => Open()} className="relative cursor-pointer flex justify-between rounded-10 hover:bg-gray-300 duration-100">
         <Image
           src={shoeimg}
           alt=""
-          width={150}
-          height={100}
+          width={120}
+          height={80}
           className="rounded-10"
         />
         <div className="flex-grow flex items-center justify-around">

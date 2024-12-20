@@ -34,7 +34,7 @@ export default function OrdersRow({ order }: { order: OrderType }) {
 
   return (
     <>
-      <div ref={row} onClick={() => Open()} className="relative cursor-pointer flex justify-between items-center bg-[#eee] rounded-10 hover:bg-gray-300 duration-200">
+      <div ref={row} onClick={() => Open()} className="relative cursor-pointer flex justify-between items-center bg-[#eee] rounded-10 hover:bg-gray-300 duration-100">
         <Image className="rounded-10" src={shoe2} width={150} height={100} alt="" />
         <div className="flex-grow flex justify-around items-center text-center">
           <div className="w-1/4 flex flex-col justify-center gap-2">

@@ -49,21 +49,21 @@ export default function Nav() {
   return (
     <div className="bg-gradient-to-r from-bgPrimary-from to-bgPrimary-to h-screen py-5 sticky sm:top-0 max-sm:fixed max-sm:bottom-0 max-sm:w-full max-sm:h-fit max-sm:z-50 max-sm:py-1">
       <div className=" px-5 w-full mb-5 duration-150 max-sm:hidden">
-        <h2 className="font-bold text-3xl text-[#eee]">Dashboard</h2>
+        <h2 className="font-bold text-2xl text-[#eee]">Dashboard</h2>
       </div>
-      <ul className="py-4 flex flex-col max-sm:flex-row max-sm:justify-between max-sm:py-0 dashbord-nav">
+      <ul className="py-4 flex flex-col">
         <Link
           ref={allShoes}
           // onClick={(e) => ChangePath(e.currentTarget.href)}
           href={"/dashbord"}
-          className="relative flex items-center max-sm:p-2 max-sm:gap-2 gap-5 px-5 py-4 text-xl max-md:text-lg font-medium text-[#bbb] hover:text-white duration-100 max-sm:text-base max-sm:mx-2 text-nowrap max-sm:flex-col dashbord-path">
+          className="dashboard_nav-link dashbord-path">
           <AiFillProduct className="size-6 max-sm:w-5 max-sm:h-5" />
           <span>Overview</span>
         </Link>
         <Link
           ref={addShoe}
           href={"/dashbord/orders"}
-          className="relative flex items-center max-sm:p-2 max-sm:gap-2 gap-5 px-5 py-4 text-xl max-md:text-lg font-medium text-[#bbb] hover:text-white duration-100 max-sm:text-base max-sm:mx-2 text-nowrap max-sm:flex-col">
+          className="dashboard_nav-link">
           <FaBoxes className="size-6" />
           <span>Orders</span>
         </Link>
@@ -71,7 +71,7 @@ export default function Nav() {
           ref={orders}
           // onClick={(e) => ChangePath(e.currentTarget.href)}
           href={"/dashbord/shoes"}
-          className="relative flex items-center max-sm:p-2 max-sm:gap-2 gap-5 px-5 py-4 text-xl max-md:text-lg font-medium text-[#bbb] hover:text-white duration-100 max-sm:text-base max-sm:mx-2 text-nowrap max-sm:flex-col">
+          className="dashboard_nav-link">
           <FaStore className="size-6" />
           <span>Shoes</span>
         </Link>
@@ -79,7 +79,7 @@ export default function Nav() {
           ref={users}
           // onClick={(e) => ChangePath(e.currentTarget.href)}
           href={"/dashbord/users"}
-          className="relative flex items-center max-sm:p-2 max-sm:gap-2 gap-5 px-5 py-4 text-xl max-md:text-lg font-medium text-[#bbb] hover:text-white duration-100 max-sm:text-base max-sm:mx-2 text-nowrap max-sm:flex-col">
+          className="dashboard_nav-link">
           <FaUsers className="size-6 max-sm:w-5 max-sm:h-5" /><span>Customers</span>
         </Link>
       </ul>
