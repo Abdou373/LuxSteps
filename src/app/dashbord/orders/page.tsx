@@ -1,33 +1,36 @@
 import OrdersRow from "@/components/dashbord/OrdersRow";
+import SearchForm from "@/components/dashbord/SearchForm";
+import StatesDropDown from "@/components/dashbord/StatesDropDown";
+import { STATES } from "@/utils/contants";
 import { orders } from "@/utils/date";
-import { FaCaretDown, FaCaretUp, FaSearch } from "react-icons/fa";
+import { useState } from "react";
+import { FaBoxes } from "react-icons/fa";
 import { HiChevronDown } from "react-icons/hi";
+import { IoMdCheckmarkCircleOutline } from "react-icons/io";
 
 
 
 export default function Orders() {
+
   return (
     <div className="relative py-5 px-[2%] max-sm:px-5">
       <h1 className="dashboard-section">Orders</h1>
-      <button className="px-5 py-2 bg-blue-950 rounded-10 mx-4 mb-4 text-[#eee]">Confirmed Orders</button>
-      <div className="flex gap-4 px-5">
-        <form className="relative w-1/2">
-          <input
-            type="text"
-            className="bg-gray-200 w-full text-lg font-medium px-3 py-2 rounded-10 border border-secondary border-solid outline-none"
-            placeholder="Search orders by customer, shoe..."
-          />
-          <button className="absolute text-center bg-secondary rounded-r-10 -translate-x-full h-full px-5 ">
-            <FaSearch className="size-5 text-[#ddd]" />
-          </button>
-        </form>
+      <button className="px-5 py-2 bg-blue-950 rounded-10 mx-4 mb-4 text-[#eee] flex items-center gap-2">
+        Confirmed Orders
+        <FaBoxes />
+      </button>
+      <div className="relative flex gap-4 px-5">
+        <SearchForm placeholder={"Search Orders by client, city..."} />
         <div className="flex gap-10 items-center">
           <h3 className="text-xl">Filter by :</h3>
 
-          <button className="px-3 py-1 bg-[#eee] rounded-10 text-sm font-medium flex items-center gap-1">
-            State
-            <HiChevronDown className="size-4" />
-          </button>
+          <div className="px-3 py-1 bg-[#eee] rounded-10 flex items-center gap-1 states-btn">
+            <span className="text-sm font-medium">State</span>
+            <HiChevronDown className={`size-4 `} />
+            <div className="absolute top-2/3 left-0 hidden z-20 w-full pt-3">
+              <StatesDropDown />
+            </div>
+          </div>
           <button className="px-3 py-1 bg-[#eee] rounded-10 text-sm font-medium flex items-center gap-2">
             Add Time
             <div>

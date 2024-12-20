@@ -57,6 +57,10 @@ body ~ *::-webkit-scrollbar-thumb {
   }
 }
 
+.states-btn:hover > div{
+    display: block;
+}
+
 .place_order-input:focus + label,
 .place_order-input:valid + label{
     transform: translateY(-38px);

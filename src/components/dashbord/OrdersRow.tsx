@@ -2,9 +2,7 @@
 
 import { OrderType } from "@/utils/type"
 import { useRef, useState } from "react";
-import { CgDetailsMore, CgRemove } from "react-icons/cg";
-import { MdVerifiedUser } from "react-icons/md";
-import { TbFlagCancel, TbTruckDelivery } from "react-icons/tb";
+import { CgRemove } from "react-icons/cg";
 import Image from "next/image";
 import shoe1 from '@/images/products/Shoe1.jpg';
 import shoe2 from '@/images/products/Shoe2.png';
