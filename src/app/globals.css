@@ -58,8 +58,23 @@ body ~ *::-webkit-scrollbar-thumb {
   .status_btn{
     @apply w-full flex justify-center items-center hover:bg-bgPrimary-from/60 gap-5 py-2 cursor-pointer font-normal text-lg duration-200 rounded-10;
   }
+  .dashboard_adding-input{
+    @apply w-full px-4 py-2 border border-solid border-secondary text-lg bg-[#fff] rounded-10 outline-none;
+  }
+  .dashboard_adding-category{
+    @apply w-full px-4 py-2 border border-solid border-secondary text-lg bg-[#fff] rounded-10 outline-none focus:rounded-b-[0] cursor-pointer duration-200;
+  }
 }
 
+.dashboard_adding-category:focus +div{
+    z-index: 10;
+}
+.dashboard_adding-category:focus +div > div{
+    transform: translateY(0);
+}
+.dashboard_adding-category:focus ~span{
+    transform: rotate(180deg) translateY(50%);
+}
 .states-btn:hover > div{
     display: block;
 }

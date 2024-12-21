@@ -57,3 +57,18 @@ export const STATES = [
     "Wisconsin",
     "Wyoming"
 ]
+
+export const CATEGORIES = [
+    "Sneaker",
+    "Casual Sneaker",
+    "Skateboard",
+    "Outdoor Boots",
+    "Work & Safety Shoes",
+    "Heeled Sandals",
+    "Pvc Sandals",
+    "Snow Boots",
+    "Ankle Boots",
+    "Canvas",
+    "Flat Sandals",
+    "High Boots",
+]
