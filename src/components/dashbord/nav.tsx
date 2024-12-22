@@ -55,14 +55,14 @@ export default function Nav() {
         <Link
           ref={allShoes}
           // onClick={(e) => ChangePath(e.currentTarget.href)}
-          href={"/dashbord"}
+          href={"/dashboard"}
           className="dashboard_nav-link dashbord-path">
           <AiFillProduct className="size-6 max-sm:w-5 max-sm:h-5" />
           <span>Overview</span>
         </Link>
         <Link
           ref={addShoe}
-          href={"/dashbord/orders"}
+          href={"/dashboard/orders"}
           className="dashboard_nav-link">
           <FaBoxes className="size-6" />
           <span>Orders</span>
@@ -70,7 +70,7 @@ export default function Nav() {
         <Link
           ref={orders}
           // onClick={(e) => ChangePath(e.currentTarget.href)}
-          href={"/dashbord/shoes"}
+          href={"/dashboard/shoes"}
           className="dashboard_nav-link">
           <FaStore className="size-6" />
           <span>Shoes</span>
@@ -78,7 +78,7 @@ export default function Nav() {
         <Link
           ref={users}
           // onClick={(e) => ChangePath(e.currentTarget.href)}
-          href={"/dashbord/users"}
+          href={"/dashboard/users"}
           className="dashboard_nav-link">
           <FaUsers className="size-6 max-sm:w-5 max-sm:h-5" /><span>Customers</span>
         </Link>

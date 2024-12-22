@@ -66,9 +66,6 @@ body ~ *::-webkit-scrollbar-thumb {
   }
 }
 
-.dashboard_adding-category:focus +div{
-    z-index: 10;
-}
 .dashboard_adding-category:focus +div > div{
     transform: translateY(0);
 }

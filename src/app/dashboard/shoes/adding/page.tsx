@@ -93,8 +93,8 @@ export default function AddShoes() {
               placeholder="Category"
             />
 
-            <div className="absolute overflow-hidden top-full left-0 w-full -z-10">
-              <div className="-translate-y-full relative w-full h-max z-10 duration-200">
+            <div className="absolute overflow-hidden top-full left-0 w-full ">
+              <div className="-translate-y-full relative w-full h-max duration-200 z-30">
                 <div className="grid grid-cols-3 w-full gap-1 p-2 bg-[#eee] border border-solid border-secondary text-white rounded-b-10">
                   {CATEGORIES.map((category, i) => (
                     <button
@@ -146,7 +146,7 @@ export default function AddShoes() {
           {sizes.map((size, i) => (
             <button
               key={i}
-              className="bg-bgPrimary-from cursor-pointer text-[#eee] px-2 py-1 rounded-lg"
+              className="bg-bgPrimary-from cursor-pointer text-[#eee] px-2 py-1 rounded-lg z-20"
               onClick={() => setSizes(sizes.filter((s) => s !== size))}>
               {size}
             </button>

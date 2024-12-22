@@ -44,7 +44,7 @@ export default function SecondHeader() {
             )}
           </div>
           {catigory && <div onClick={() => setCatigory(false)} className="absolute z-20 w-full h-screen left-0 top-0"></div>}
-          <Link className="nav-section" href={"/dashbord"}>Dashboard</Link>
+          <Link className="nav-section" href={"/dashboard"}>Dashboard</Link>
         </div>
 
         {/* <FiMenu onClick={() => sidebarOpen()} className="md:hidden w-7 h-7 ml-[5%] mr-2 text-[#ddd] max-[425]: ml-" /> */}
