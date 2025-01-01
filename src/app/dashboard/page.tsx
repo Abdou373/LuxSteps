@@ -87,28 +87,40 @@ export default function Dashbord() {
       </div>
 
       {/* Complete Styles */}
-      <h2>Customers & Visitors</h2>
+      <h2 className="text-2xl font-semibold mx-3 my-5">Customers & Visitors</h2>
+      <div className="flex gap-4">
+        <div className="p-4 shadow-[0_0_10px_0_#999] rounded-10">
+          <p className="font-medium text-2xl">Total Visitors</p>
+          <h3 className="text-9xl text-[#aaa] font-bold text-center">1203<span className="text-xl mx-2">visitors</span></h3>
+        </div>
+        <div className="p-4 shadow-[0_0_10px_0_#999] rounded-10">
+          <p className="font-medium text-2xl">Total Customers</p>
+          <h3 className="text-9xl text-[#aaa] font-bold text-center">432<span className="text-xl mx-2">Customers</span></h3>
+        </div>
+        <div className="gap-2 flex-grow flex flex-col">
+          <div className="p-2 shadow-[0_0_10px_0_#999] rounded-10">
+            <p className="text-lg font-medium">new visitors this month</p>
+            <h3 className="text-5xl font-semibold text-[#aaa] text-center">310<span className="text-sm mx-2">visitors</span></h3>
+            <p className="text-sm text-green-900 text-center">+{32}% This week</p>
+          </div>
+          <div className="p-2 shadow-[0_0_10px_0_#999] rounded-10">
+            <p className="text-lg font-medium">New customer this month</p>
+            <h3 className="text-5xl font-semibold text-[#aaa] text-center">154<span className="text-sm mx-2">customers</span></h3>
+            <p className="text-sm text-green-900 text-center">+{21}% This month</p>
+          </div>
+        </div>
+      </div>
+
+      <h2 className="text-2xl font-semibold mx-3 my-5">Most reviewed customers</h2>
       <div>
-        <div>
-          <p>Total Visitors</p>
-          <h3>1203<span>visitors</span></h3>
-        </div>
-        <div>
-          <div>
-            <p>new visitors this month</p>
-            <h3>310<span>visitors</span></h3>
-            <p>+{32}% This week</p>
-          </div>
-          <div>
-            <p>New customer this month</p>
-            <h3>154<span>customers</span></h3>
-            <p>+{21}% This month</p>
-          </div>
-        </div>
-        <div>
-          <p>Total Customers</p>
-          <h3>432<span>Customers</span></h3>
-        </div>
+        {/* {[...Array(5)].map((n,i) => ( */}
+        {/* <div> */}
+        {/* avatar */}
+        {/* Name */}
+        {/* email */}
+        {/* Total reviews */}
+        {/* </div> */}
+        {/* ))} */}
       </div>
     </div>
   )

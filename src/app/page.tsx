@@ -7,13 +7,17 @@ import HorizontalShoes from "@/components/Home/HorizontalShoes";
 import Link from "next/link";
 import shoes1 from "@/images/products/Shoe1.jpg";
 import Image from "next/image";
+import ShopByCategory from "@/components/Home/ShopByCategory";
 
 
 export default function Home() {
   return (
     <div className="relative">
       <SecondHeader />
-      <Slider />
+      {/* <Slider /> */}
+
+      <ShopByCategory />
+
       <main className="bg-[#d0d0d0] px-10 pt-5 pb-10 max-sm:px-5 ">
         <h2 className="section-heading">New Shoes</h2>
         <HorizontalShoes />

@@ -24,21 +24,21 @@ export default function Footer() {
         </div>
         <div className="flex justify-between w-2/3 max-sm:flex-col-reverse max-sm:items-center max-sm:gap-4">
           <div>
-            <h3 className="font-semibold text-2xl text-[#bbb] ">Contact</h3>
-            <p className="flex items-center gap-2 my-2 text-md text-[#aaa]"><HiOutlineMail /> luxsteps@gmail.com</p>
-            <p className="flex items-center gap-2 my-2 text-md text-[#aaa]"><FaPhoneAlt /> +213534124235</p>
+            <h3 className="font-semibold text-3xl text-[#eee] ">Contact</h3>
+            <p className="flex items-center gap-2 my-2 text-xl font-light text-white"><HiOutlineMail /> luxsteps@gmail.com</p>
+            <p className="flex items-center gap-2 my-2 text-xl font-light text-white"><FaPhoneAlt /> +213534124235</p>
           </div>
           <div className="text-center ">
-            <h3 className="font-semibold text-2xl text-[#bbb] mb-4">Follow</h3>
+            <h3 className="font-semibold text-3xl text-[#eee] mb-4">Follow</h3>
             <div className="flex gap-4 text-[#eee]">
-              <Link href={""} className="bg-[#001127] p-4 rounded-full"><FaFacebookF className="w-10 h-10" /></Link>
-              <Link href={""} className="bg-[#001127] p-4 rounded-full"><FaInstagram className="w-10 h-10" /></Link>
-              <Link href={""} className="bg-[#001127] p-4 rounded-full"><FaTiktok className="w-10 h-10" /></Link>
+              <Link href={""} className="bg-secondary/15 p-4 rounded-full text-[#aaa] hover:text-[#eee] hover:bg-secondary/30 duration-150"><FaFacebookF className="size-10 " /></Link>
+              <Link href={""} className="bg-secondary/15 p-4 rounded-full text-[#aaa] hover:text-[#eee] hover:bg-secondary/30 duration-150"><FaInstagram className="size-10 " /></Link>
+              <Link href={""} className="bg-secondary/15 p-4 rounded-full text-[#aaa] hover:text-[#eee] hover:bg-secondary/30 duration-150"><FaTiktok className="size-10 " /></Link>
             </div>
           </div>
         </div>
       </div>
-      <p className="text-center text-[#555] text-sm border-t-2 border-solid border-[--main-color] pt-4">{`Copyright © 2024  Created by AbdElAziz Mesbahi (abdoumes3539@gmail.com)`}</p>
+      <p className="text-center text-[#555] text-sm border-t-2 border-solid border-[#aaa] pt-4">{`Copyright © 2024  Created by AbdElAziz Mesbahi (abdoumes3539@gmail.com)`}</p>
     </div>
   )
 }
