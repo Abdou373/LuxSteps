@@ -31,6 +31,7 @@ export default function OrdersRow({ order }: { order: OrderType }) {
     setOpen(false)
   }
 
+  // aliiiiy
   return (
     <>
       <div ref={row} onClick={() => Open()} className="relative cursor-pointer flex justify-between items-center bg-[#eee] rounded-10 hover:bg-gray-300 duration-100">
