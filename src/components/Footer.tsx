@@ -5,7 +5,7 @@ import { FaTiktok } from "react-icons/fa";
 import { FaFacebookF } from "react-icons/fa";
 import { HiOutlineMail } from "react-icons/hi";
 import { FaPhoneAlt } from "react-icons/fa";
-import logo from "@/images/Logo.png";
+import logo from "@/images/logo-no-background.png";
 
 
 

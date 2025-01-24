@@ -59,16 +59,11 @@ export const STATES = [
 ]
 
 export const CATEGORIES = [
-    "Sneaker",
     "Casual Sneaker",
-    "Skateboard",
-    "Outdoor Boots",
+    "Women's Boots",
     "Work & Safety Shoes",
-    "Heeled Sandals",
-    "Pvc Sandals",
     "Snow Boots",
     "Ankle Boots",
     "Canvas",
-    "Flat Sandals",
     "High Boots",
 ]
