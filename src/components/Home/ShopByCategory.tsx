@@ -1,7 +1,6 @@
 import Link from 'next/link'
 import Image from 'next/image';
 import { CATEGORIES } from '@/utils/contants'
-import img from '../../images/shoes-categories/shoe.png';
 import Sneakers from "@/images/shoes-categories/shoe.png";
 import casualShoes from "@/images/shoes-categories/Nike-Shoes.png";
 import menBoots from "@/images/shoes-categories/Boots.png";
@@ -20,85 +19,84 @@ export default function ShopByCategory() {
       {/* {CATEGORIES.map((category, i) => (
         <Link key={i} href={`/category/${category.split(' ').join('')}`}>
           <div className="category-card">
-            <Image width={100} src={img} alt={''} />
+            <Image height={100} src={img} alt={''} />
             <div className="px-4 py-2">
-              <p className="text-lg font-medium text-[#333]">{category}</p>
+              <em className="text-3xl text-[#333]">{category}</em>
             </div>
           </div>
         </Link>
       ))} */}
-      <h1>Shoes By Categories</h1>
       <div>
-        <div className="grid grid-cols-3 gap-4">
-          <Link href="/category/Sneakers">
+        <div className="grid grid-cols-3 gap-4 px-4 py-4">
+          <Link href={`/shoes?category=${CATEGORIES[0].split(' ').join('')}`} >
             <div className="category-card">
-              <Image width={100} src={Sneakers} alt={''} />
+              <Image height={150} width={0} src={Sneakers} alt={''} />
               <div className="px-4 py-2">
-                <p className="text-lg font-medium text-[#333]">Sneakers</p>
+                <em className="text-3xl text-[#333]">{CATEGORIES[0]}</em>
               </div>
             </div>
           </Link>
-          <Link href="/category/CasualShoes">
+          <Link href={`/shoes?category=${CATEGORIES[1].split(' ').join('')}`} >
             <div className="category-card">
-              <Image width={100} src={casualShoes} alt={''} />
+              <Image height={150} src={casualShoes} alt={''} />
               <div className="px-4 py-2">
-                <p className="text-lg font-medium text-[#333]">Casual Shoes</p>
+                <em className="text-3xl text-[#333]">{CATEGORIES[1]}</em>
               </div>
             </div>
           </Link>
-          <Link href="/category/Sneakers">
+          <Link href={`/shoes?category=${CATEGORIES[2].split(' ').join('')}`} >
             <div className="category-card">
-              <Image width={100} src={Sneakers} alt={''} />
+              <Image height={120} src={menBoots} alt={''} />
               <div className="px-4 py-2">
-                <p className="text-lg font-medium text-[#333]">Sneakers</p>
+                <em className="text-3xl text-[#333]">{CATEGORIES[2]}</em>
               </div>
             </div>
           </Link>
-          <Link href="/category/CasualShoes">
+          <Link href={`/shoes?category=${CATEGORIES[3].split(' ').join('')}`} >
             <div className="category-card">
-              <Image width={100} src={casualShoes} alt={''} />
+              <Image height={150} src={footballShoes} alt={''} />
               <div className="px-4 py-2">
-                <p className="text-lg font-medium text-[#333]">Casual Shoes</p>
+                <em className="text-3xl text-[#333]">{CATEGORIES[3]}</em>
               </div>
             </div>
           </Link>
-          <Link href="/category/Sneakers">
+          <Link href={`/shoes?category=${CATEGORIES[4].split(' ').join('')}`} >
             <div className="category-card">
-              <Image width={100} src={Sneakers} alt={''} />
+              <Image height={150} src={Safety} alt={''} />
               <div className="px-4 py-2">
-                <p className="text-lg font-medium text-[#333]">Sneakers</p>
+                <em className="text-3xl text-[#333]">{CATEGORIES[4]}</em>
               </div>
             </div>
           </Link>
-          <Link href="/category/CasualShoes">
+          <Link href={`/shoes?category=${CATEGORIES[5].split(' ').join('')}`} >
             <div className="category-card">
-              <Image width={100} src={casualShoes} alt={''} />
+              <Image height={150} src={snowBoots} alt={''} />
               <div className="px-4 py-2">
-                <p className="text-lg font-medium text-[#333]">Casual Shoes</p>
+                <em className="text-3xl text-[#333]">{CATEGORIES[5]}</em>
               </div>
             </div>
           </Link>
-          <Link href="/category/Sneakers">
+          <Link href={`/shoes?category=${CATEGORIES[6].split(' ').join('')}`} >
             <div className="category-card">
-              <Image width={100} src={Sneakers} alt={''} />
+              <Image height={150} src={ankleBoots} alt={''} />
               <div className="px-4 py-2">
-                <p className="text-lg font-medium text-[#333]">Sneakers</p>
+                <em className="text-3xl text-[#333]">{CATEGORIES[6]}</em>
               </div>
             </div>
           </Link>
-          <Link href="/category/CasualShoes">
+          <Link href={`/shoes?category=${CATEGORIES[7].split(' ').join('')}`} >
             <div className="category-card">
-              <Image width={100} src={casualShoes} alt={''} />
+              <Image height={150} src={canvas} alt={''} />
               <div className="px-4 py-2">
-                <p className="text-lg font-medium text-[#333]">Casual Shoes</p>
+                <em className="text-3xl text-[#333]">{CATEGORIES[7]}</em>
               </div>
             </div>
           </Link>
-          <Link href="/category/CasualShoes">
+          <Link href={`/shoes?category=${CATEGORIES[8].split(' ').join('')}`} >
             <div className="category-card">
-              <Image width={100} src={casualShoes} alt={''} />
+              <Image height={150} src={highSandals} alt={''} />
               <div className="px-4 py-2">
-                <p className="text-lg font-medium text-[#333]">Casual Shoes</p>
+                <em className="text-3xl text-[#333]">{CATEGORIES[8]}</em>
               </div>
             </div>
           </Link>

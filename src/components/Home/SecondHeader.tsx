@@ -39,7 +39,7 @@ export default function SecondHeader() {
             {catigory && (
               <div className="categories">
                 {CATEGORIES.map((category, i) => (
-                  <Link key={i} href={`shoes?category=${category}`} className="category">{category}</Link>
+                  <Link key={i} href={`shoes?category=${category.split(" ").join("")}`} className="category">{category}</Link>
                 ))}
               </div>
             )}
