@@ -59,11 +59,13 @@ export const STATES = [
 ]
 
 export const CATEGORIES = [
-    "Casual Sneaker",
-    "Women's Boots",
+    "Sneakers",
+    "Casual Shoes",
+    "Men's Boots",
+    "Football Boots",
     "Work & Safety Shoes",
     "Snow Boots",
     "Ankle Boots",
-    "Canvas",
-    "High Boots",
+    "Canvas Shoes",
+    "High Sandals",
 ]
