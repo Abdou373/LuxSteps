@@ -55,7 +55,7 @@ export default function SecondHeader() {
           <TiShoppingCart className="size-10 text-[#d0d0d0]" />
         </div>
       </div>
-
+      {/* ok */}
     </>
   )
 }
