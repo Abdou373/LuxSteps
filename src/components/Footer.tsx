@@ -22,7 +22,7 @@ export default function Footer() {
         <div >
           <Image src={logo} width={200} height={120} alt="" />
         </div>
-        <div className="flex justify-between w-2/3 max-sm:flex-col-reverse max-sm:items-center max-sm:gap-4">
+        <div className="flex justify-around w-2/3 max-sm:flex-col-reverse max-sm:items-center max-sm:gap-4">
           <div>
             <h3 className="font-semibold text-3xl text-[#eee] ">Contact</h3>
             <p className="flex items-center gap-2 my-2 text-xl font-light text-white"><HiOutlineMail /> luxsteps@gmail.com</p>
@@ -31,9 +31,9 @@ export default function Footer() {
           <div className="text-center ">
             <h3 className="font-semibold text-3xl text-[#eee] mb-4">Follow</h3>
             <div className="flex gap-4 text-[#eee]">
-              <Link href={""} className="bg-secondary/15 p-4 rounded-full text-[#aaa] hover:text-[#eee] hover:bg-secondary/30 duration-150"><FaFacebookF className="size-10 " /></Link>
-              <Link href={""} className="bg-secondary/15 p-4 rounded-full text-[#aaa] hover:text-[#eee] hover:bg-secondary/30 duration-150"><FaInstagram className="size-10 " /></Link>
-              <Link href={""} className="bg-secondary/15 p-4 rounded-full text-[#aaa] hover:text-[#eee] hover:bg-secondary/30 duration-150"><FaTiktok className="size-10 " /></Link>
+              <Link href={""} className="bg-secondary/15 p-2 rounded-full text-[#aaa] hover:text-[#eee] hover:bg-secondary/30 duration-150"><FaFacebookF className="size-6 " /></Link>
+              <Link href={""} className="bg-secondary/15 p-2 rounded-full text-[#aaa] hover:text-[#eee] hover:bg-secondary/30 duration-150"><FaInstagram className="size-6 " /></Link>
+              <Link href={""} className="bg-secondary/15 p-2 rounded-full text-[#aaa] hover:text-[#eee] hover:bg-secondary/30 duration-150"><FaTiktok className="size-6 " /></Link>
             </div>
           </div>
         </div>
