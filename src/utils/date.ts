@@ -18,7 +18,7 @@ export const shoes: ShoesType[] = [
             "https://res.cloudinary.com/dg3kz4fwx/image/upload/v1726684267/download_5_oggycb.jpg",//
             "https://res.cloudinary.com/dg3kz4fwx/image/upload/v1726873295/download_6_hmdx4s.jpg"],
         sizes: [40, 41, 42, 43],
-        category: "men",
+        category: "Canvas Shoes",
         rating: 4.2,
         reviews: 12
     },
@@ -31,7 +31,7 @@ export const shoes: ShoesType[] = [
             "https://res.cloudinary.com/dg3kz4fwx/image/upload/v1726684267/download_5_oggycb.jpg",
             "https://res.cloudinary.com/dg3kz4fwx/image/upload/v1726684267/download_5_oggycb.jpg"],
         sizes: [40, 41, 42, 43],
-        category: "women",
+        category: "Canvas Shoes",
         rating: 2.5,
         reviews: 10
     },
@@ -45,7 +45,7 @@ export const shoes: ShoesType[] = [
             "https://res.cloudinary.com/dg3kz4fwx/image/upload/v1726331105/download_1_uzd4t4.jpg",
             "https://res.cloudinary.com/dg3kz4fwx/image/upload/v1726331105/download_1_uzd4t4.jpg"],
         sizes: [40, 41, 42, 43],
-        category: "kids",
+        category: "Canvas Shoes",
         rating: 2.8,
         reviews: 45
     },
@@ -58,7 +58,7 @@ export const shoes: ShoesType[] = [
             "https://res.cloudinary.com/dg3kz4fwx/image/upload/v1726684243/images_5_jgee68.jpg",
             "https://res.cloudinary.com/dg3kz4fwx/image/upload/v1726684243/images_5_jgee68.jpg"],
         sizes: [40, 41, 42, 43],
-        category: "kids",
+        category: "Football Boots",
         rating: 3,
         reviews: 32
     },
@@ -71,7 +71,7 @@ export const shoes: ShoesType[] = [
             "https://res.cloudinary.com/dg3kz4fwx/image/upload/v1731035164/images_9_qgwx48.jpg",
             "https://res.cloudinary.com/dg3kz4fwx/image/upload/v1731035164/images_9_qgwx48.jpg"],
         sizes: [40, 41, 42, 43],
-        category: "kids",
+        category: "Football Boots",
         rating: 5,
         reviews: 10
     },
@@ -84,7 +84,7 @@ export const shoes: ShoesType[] = [
             "https://res.cloudinary.com/dg3kz4fwx/image/upload/v1731035125/images_13_kzm3nu.jpg",
             "https://res.cloudinary.com/dg3kz4fwx/image/upload/v1731035125/images_13_kzm3nu.jpg"],
         sizes: [40, 41, 42, 43],
-        category: "kids",
+        category: "Football Boots",
         rating: 3.7,
         reviews: 10
     },
@@ -97,7 +97,7 @@ export const shoes: ShoesType[] = [
             "https://res.cloudinary.com/dg3kz4fwx/image/upload/v1731035144/images_11_udx9sv.jpg",
             "https://res.cloudinary.com/dg3kz4fwx/image/upload/v1731035144/images_11_udx9sv.jpg"],
         sizes: [40, 41, 42, 43],
-        category: "kids",
+        category: "Snow Boots",
         rating: 4,
         reviews: 10
     },
@@ -110,7 +110,7 @@ export const shoes: ShoesType[] = [
             "https://res.cloudinary.com/dg3kz4fwx/image/upload/v1731035090/images_10_mxoyfa.jpg",
             "https://res.cloudinary.com/dg3kz4fwx/image/upload/v1731035090/images_10_mxoyfa.jpg"],
         sizes: [40, 41, 42, 43],
-        category: "kids",
+        category: "Casual Shoes",
         rating: 4.1,
         reviews: 10
     },
@@ -123,7 +123,7 @@ export const shoes: ShoesType[] = [
             "https://res.cloudinary.com/dg3kz4fwx/image/upload/v1731035106/images_12_lpqpk1.jpg",
             "https://res.cloudinary.com/dg3kz4fwx/image/upload/v1731035106/images_12_lpqpk1.jpg"],
         sizes: [40, 41, 42, 43],
-        category: "kids",
+        category: "Casual Shoes",
         rating: 2,
         reviews: 10
     },
@@ -135,7 +135,7 @@ export const shoes: ShoesType[] = [
         imgs: ["https://res.cloudinary.com/dg3kz4fwx/image/upload/v1731035106/images_12_lpqpk1.jpg",
             "https://res.cloudinary.com/dg3kz4fwx/image/upload/v1731035106/images_12_lpqpk1.jpg"],
         sizes: [40, 41, 42, 43],
-        category: "kids",
+        category: "Sneakers",
         rating: 1,
         reviews: 10
     }
