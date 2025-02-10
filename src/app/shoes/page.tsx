@@ -25,5 +25,3 @@ export default async function Shoes({ searchParams }: { searchParams: Promise<{ 
     </div>
   )
 }
-
-// 
