@@ -223,14 +223,14 @@ body ~ *::-webkit-scrollbar-thumb {
 
 /* Input Animation Start */
 
-.input-groupe>.input:valid+label,
+/* .input-groupe>.input:valid+label,
 .input-groupe>.input:focus+label {
     background-color: #fff;
     transform: translate(20px, -40px);
     font-size: smaller;
     font-weight: 600;
     color: var(--main-color);
-}
+} */
 
 
 /* Input Animation End */
@@ -380,3 +380,19 @@ body ~ *::-webkit-scrollbar-thumb {
 
 
 /* Successful Operation End */
+
+/* filter input animtion */
+
+.input {
+    animation: anim .2s linear;
+}
+
+@keyframes anim {
+    from {
+        width: 0;
+    }
+
+    to {
+        width: 80px;
+    }
+}
